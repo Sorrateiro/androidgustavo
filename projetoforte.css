@@ -1,0 +1,193 @@
+@charset "UTF-8" ;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@font-face {
+    font-family: "android";
+    src: url("fontes/idroid.otf") ;
+    
+}
+
+:root{
+    --color0: #024b22;
+    --color1:#4be0ae;
+    --color2: #039967;
+    --fonte-padrao:Arial, Helvetica, sans-serif;
+    --fonte-destaque: "Open Sans", sans-serif;
+    --fonte-android:"android";}
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{ 
+        background-color: var(--color0);
+        font-family: var(--fonte-padrao);
+    }
+
+header> h1{
+    font-size:3em ;
+    font-family: var(--fonte-padrao);
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 1px black;
+}
+
+header  {
+    
+    background-image: linear-gradient(to bottom,var(--color1),hwb(135 0% 78%)  );
+    color: aliceblue;
+    min-height: 150px;
+    text-align: center;
+}
+header > p{
+    font-family: var(--fonte-padrao);
+    font-size: 2em;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    text-shadow: 2px 2px 1px black;
+    
+}
+nav{
+    background-color: hwb(135 0% 78%) ;
+    padding: 20px;
+    box-shadow: 3PX 3PX 3px rgba(0, 0, 0, 0.459);
+
+}
+nav > a {
+    color: azure;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none; /* tirou a linha do link*/
+    font-weight: bolder; /*pois bordas */
+    transition-duration: 0.5s; /*acrecentou um tempo de transição de entrada e saída de quando passa o mause*/
+   
+}
+nav a:hover{background-color: #2aeb8150; 
+color: blanchedalmond;}/* mudou quando passou o mause por cima */
+
+main{background-color: #87ebb4;
+     min-height: 300px;
+     max-width: 1000px; /*permitiu que a pagina crecesse até mil px*/
+     margin: auto;
+     margin-bottom: 30px;/* a margem para baixo*/
+    padding: 20px;
+    box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.651);/*o primeiro e saida pra direita depos saida para baixo e terceiro o espalhamento e a cor da sobra*/
+    border-bottom-left-radius: 10px;/* a bordas de baixo com a opçao bottom */
+    border-bottom-right-radius: 10px;
+}
+main img{
+    width: 100%;
+}
+main img.piqueno{
+    display: block;/*pseudo classes tornando a imagem em bloco para manipular seu tamanho*/
+    max-width: 400px; /* deixa a imagem crecer até um limite dela*/
+    margin: auto;
+}
+main  h1{  
+    font-family: var(--fonte-android);
+    text-indent: 30px;/* é o espaço para o parágrafo um recuo  */
+    background-image: linear-gradient(to right,rgb(2, 128, 19),rgba(65, 5, 5, 0));
+}
+main h2{
+    margin: 15px;
+    text-indent: 30px;/* é o espaço para o parágrafo */
+    font-size: larger;
+    font-family: var(--fonte-android);
+    background-image: linear-gradient(to right,var(--color2),transparent);/*vai fazer um degrade da cor até o transparente*/
+}
+main h3{
+    margin: 15px;
+    background-color: aqua,transparent;
+}
+main p{
+  
+    margin: 15px 0px;
+    text-align: justify;
+    line-height: 20px;/*espaçamento entre linhas */
+    font-size: large; /*tamanho da fonte*/
+
+}
+main strong{/* tudo que for negrito*/
+    color: rgb(53, 53, 53);
+}
+main a:link{
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(9, 184, 18, 0.349);
+    color: rgb(0, 70, 29);
+    padding: 2px 6px;
+}
+main a:hover{
+    text-decoration: underline; /*mostra o sublinhado*/
+    color:var(--color0);
+    background-color: rgb(6, 185, 0);
+ 
+}
+aside{
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 10px;
+}
+div.video{
+    background-color: #646464;
+    margin: 00px -20px 30px -20px;
+    padding: 20px; 
+    position: relative;
+    /* posição relativa permite maipular com absulute aplicada no comando abaixo */
+    padding-bottom: 58%;
+}
+div.video>iframe{ 
+    position: absolute; 
+    /* position ; permite que você manipule com left e top em cima e dos lados   */
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+    /* 4 */
+    font-size: 1em;
+    /* 3 */
+    font-weight: bolder;
+    font-style: italic;
+}
+
+aside h3{
+   background-color: #024b22;
+   color: #4be0ae;
+   margin: -10px -10px 0px ;
+   padding: 5px;
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
+    font-family: "Playwrite CU", cursive;
+    font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+}
+aside ul{
+    list-style-position: inside;/* puxou a lista para dentro , insaide = para dentro, outside = para fora */
+        columns: 2; /*divide a coluna em dois */
+        /* aplicando a baixo os emojes */
+        list-style-type: '\2714\00a0\00a0';/* a barra tem que ser invertida*/
+        /* o '00a0 é o espaço entre os vezinhos aplicados ' */ 
+}
+
+footer{background-color: rgba(112, 112, 112, 0.623);
+color: aliceblue;
+text-align: center;
+font-size: xx-large;
+padding: 33px;
+border: 2px;
+margin: -29px;
+}
+footer a:link{ 
+    text-decoration: none;
+    background-color: #87ebb4;
+    color: aliceblue;
+    border-radius: 5px;
+
+}
+footer a:hover{
+    text-decoration: underline;
+    background-color: aqua;
+    color: #000000;
+}
